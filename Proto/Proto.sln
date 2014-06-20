@@ -1,0 +1,87 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{AEA9D719-A032-19E7-A157-406D087599B8}") = "Proto", "Assembly-CSharp.csproj", "{E664FD66-7241-7A36-2258-61F3C4E7918E}"
+EndProject
+Project("{AEA9D719-A032-19E7-A157-406D087599B8}") = "Proto", "Assembly-CSharp-Editor.csproj", "{17A2E574-1F35-2E50-A4C3-389EA2B20C11}"
+EndProject
+Project("{AEA9D719-A032-19E7-A157-406D087599B8}") = "Proto", "Assembly-UnityScript.unityproj", "{DD39CB38-ACEB-1A86-B115-DE004FC080E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E664FD66-7241-7A36-2258-61F3C4E7918E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E664FD66-7241-7A36-2258-61F3C4E7918E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E664FD66-7241-7A36-2258-61F3C4E7918E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E664FD66-7241-7A36-2258-61F3C4E7918E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17A2E574-1F35-2E50-A4C3-389EA2B20C11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A2E574-1F35-2E50-A4C3-389EA2B20C11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A2E574-1F35-2E50-A4C3-389EA2B20C11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17A2E574-1F35-2E50-A4C3-389EA2B20C11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD39CB38-ACEB-1A86-B115-DE004FC080E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD39CB38-ACEB-1A86-B115-DE004FC080E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD39CB38-ACEB-1A86-B115-DE004FC080E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD39CB38-ACEB-1A86-B115-DE004FC080E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+						GlobalSection(MonoDevelopProperties) = preSolution
+																																								GlobalSection(MonoDevelopProperties) = preSolution
+=======
+																									GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> FETCH_HEAD
+		StartupItem = Assembly-UnityScript.unityproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.inheritsSet = VisualStudio
+		$1.inheritsScope = text/plain
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.IndentSwitchBody = True
+		$2.AnonymousMethodBraceStyle = NextLine
+		$2.PropertyBraceStyle = NextLine
+		$2.PropertyGetBraceStyle = NextLine
+		$2.PropertySetBraceStyle = NextLine
+		$2.EventBraceStyle = NextLine
+		$2.EventAddBraceStyle = NextLine
+		$2.EventRemoveBraceStyle = NextLine
+		$2.StatementBraceStyle = NextLine
+		$2.ArrayInitializerBraceStyle = NextLine
+		$2.BeforeMethodDeclarationParentheses = False
+		$2.BeforeMethodCallParentheses = False
+		$2.BeforeConstructorDeclarationParentheses = False
+		$2.BeforeDelegateDeclarationParentheses = False
+		$2.NewParentheses = False
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+		$0.TextStylePolicy = $3
+		$3.FileWidth = 120
+		$3.TabWidth = 4
+		$3.EolMarker = Unix
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/plain
+		$3.scope = text/plain
+		$0.TextStylePolicy = $4
+		$4.TabsToSpaces = True
+		$4.EolMarker = Windows
+		$4.inheritsSet = Mono
+		$4.inheritsScope = text/plain
+		$4.scope = application/javascript
+		$0.StandardHeader = $5
+		$5.Text = 
+		$5.IncludeInNewFiles = True
+		$0.TextStylePolicy = $6
+		$6.inheritsSet = null
+		$6.scope = text/x-shader
+		$0.TextStylePolicy = $7
+		$7.inheritsSet = null
+		$7.scope = text/x-unitytxt
+		GlobalSection(MonoDevelopProperties) = preSolution
+	EndGlobalSection
+
+EndGlobal

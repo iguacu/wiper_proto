@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{E664FD66-7241-7A36-2258-61F3C4E7918E}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_4;UNITY_4_3;UNITY_64;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>D:/Programs/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>D:/Programs/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\GlobalLogic02.cs" />
+     <Compile Include="Assets\GlobalLogic_Window.cs" />
+     <Compile Include="Assets\Inventory.cs" />
+     <Compile Include="Assets\Item.cs" />
+     <Compile Include="Assets\ItemDatabase.cs" />
+     <Compile Include="Assets\PlayerControl05.cs" />
+     <Compile Include="Assets\RoomClick02.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Examples\Example Dialog\Scripts\SampleScenarioEvent.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Internal\CodeGenerator.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Internal\DefaultScriptBinder.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Internal\MessagingHandler.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Internal\ScriptBinder.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Internal\VM.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\Event\ClickAndLoadLevel.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\Event\SampleFadeEventReceiver.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\Event\ToggleActivate.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\Example Scenario Structures\TestScenarioSelector.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\Example Transitions\SelectTransition.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\Example UI\SampleButtonEvent.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUI\GUIAutoMode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUI\GUIBackLog.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUI\GUIBase.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUI\GUIConfig.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUI\GUIInput.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUI\GUIInputHelp.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUI\GUINextMessage.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUI\GUIQuickMenu.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUI\GUISaveLoad.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUI\GUISelection.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUI\GUISkip.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUI\GUIText_LevelName.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUI\SampleGUI.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUI\SampleGUICtrl.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUITransformEditable\TransformGUIButton.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUITransformEditable\TransformGUILabel.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUITransformEditable\TransformGUITextField.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUITransformEditable\TransformGUIToggle.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\Sample\GUITransformEditable\TransformGUIToolbar.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\API\SystemUtility.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\API\ViNo.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\API\ViNoAPI.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Ctrl\GUISelectionsCtrl.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Ctrl\ScenarioCtrl.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Ctrl\SelectionsCtrl.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Ctrl\TextButtonSelectionsCtrl.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Data\ActorInfo.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Data\ActorLibrary.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Data\DialogPartData.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Data\FlagTableData.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Data\ScenarioFinishEventData.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Data\Scene.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Data\SceneLibrary.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Data\SoundDataEntry.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Data\ViNoFlagType.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Effects\Blink.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Effects\GUIFadeTransition.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Effects\GUISceneFade.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Effects\OnEnablePlayAnimations.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\BackLogEvent.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\ClickAction.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\ContinueEvent.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\MessageEvent.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\MessageEventData.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\OnActiveSaveLoadPanel.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\OnEnableAndHideSystemUI.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\SceneEvent.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\SystemUIEvent.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\TitleMenuEvent.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\ViNoAnimationListener.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\ViNoDialogEventData.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\ViNoDialogPartEnterListener.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\ViNoEventData.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\ViNoEventListener.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\ViNoEventManager.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\ViNoGOEvent.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Event\ViNoTextMeshEventListener.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\AnimationNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\ClearMessageNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\ClearSceneNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\CreateObjectNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\DestroyObjectNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\DialogPartNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\EventTriggerNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\FadeOutSoundNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\JumpTargetNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\LoadImageNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\LoadLevelNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\LoadScenarioNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\LoadSceneNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\PlaySoundNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\ScenarioNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\SelectionsNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\SetTextNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\ViNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\WaitClickNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Nodes\WaitNode.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\ObjectFactory\ViNoLayerFactory.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\SaveLoad\CheckQuickSaveData.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\SaveLoad\ExternalAccessor.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\SaveLoad\SceneCreator.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\SaveLoad\ViNoGameSaveLoad.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\SaveLoad\ViNoSceneManager.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\SaveLoad\ViNoSceneSaveUtil.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Sound\SimpleSoundPlayer.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Sound\ViNoSoundPlayer.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\UI\ColorPanel.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\UI\SimpleButton.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\UI\TextButton.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\UI\TouchScreen.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\UI\ViNoGrid.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\UI\ViNoTextBox.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Util\ActorUtility.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Util\FlagTable.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Util\ResourceMetaData.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Util\TargetFPS.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Util\ViNoBackLog.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Util\ViNoFPS.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Util\ViNoSaveInfo.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Util\ViNoSceneUtil.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\Scripts\ViNo\Util\ViNoToolUtil.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\iTween\Plugins\iTween.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\iTween\Sample\MoveSample.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\iTween\Sample\RotateSample.cs" />
+     <Compile Include="Assets\VisualNovelToolkit\iTween\Sample\SampleInfo.cs" />
+     <Compile Include="Assets\clickRoom.cs" />
+     <Compile Include="Assets\playerControl03.cs" />
+     <Compile Include="Assets\returnOutside.cs" />
+     <Compile Include="Assets\roomObjective.cs" />
+     <Compile Include="Assets\windowClean.cs" />
+     <None Include="Assets\VisualNovelToolkit\Resources\Shader\Unlit Alpha.shader" />
+     <None Include="Assets\VisualNovelToolkit\ReadMe_Japanese.txt" />
+     <None Include="Assets\VisualNovelToolkit\Resources\BGM\ReadMe.txt" />
+     <None Include="Assets\VisualNovelToolkit\Examples\Example Dialog\ReadMe.txt" />
+     <None Include="Assets\VisualNovelToolkit\ReadMe.txt" />
+     <None Include="Assets\VisualNovelToolkit\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\VisualNovelToolkit\Resources\Effects\ReadMe.txt" />
+ <Reference Include="DLL">
+ <HintPath>Assets\VisualNovelToolkit\DLLs\DLL.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
