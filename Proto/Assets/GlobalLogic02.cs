@@ -14,6 +14,7 @@ public class GlobalLogic02 : MonoBehaviour
     static public int curX;
     static public int curY;
     static public Transform[,] window = new Transform[wX, wY];
+    int dayMax=15;
     //TestNum
     public float m;
     public float h;
@@ -22,29 +23,41 @@ public class GlobalLogic02 : MonoBehaviour
     static public int totSce=1;
     static public int[,] scR = new int[totSce, 2];
     static public int[] currentSceneStage=new int[totSce];
+    static public int[] totSceneStage=new int[totSce];
     static public int curScene=0;
     public Sprite windowQ;// Resources.Load("fruits_1", typeof(Sprite)) as Sprite
     public Sprite windowN;
+
+    static public Sprite windowQ1;// Resources.Load("fruits_1", typeof(Sprite)) as Sprite
+    static public Sprite windowN1;
     //Scenariio 1
     static public bool s1On = false;
-    void GameOver()
+    static void GameOver(int gameCoef)
     {
+        if (gameCoef == 0)
+        {
+            //Gameover
+        } else
+        {//Ending
         
+        }
     }
     
-    void randomScene1Window()
+    static void randomScene1Window()
     {
         for (int i=0; i<totSce; i++)
         {
             scR [i, 0] = (int)(Random.value * wX);
             scR [i, 1] = (int)(Random.value * wY);
-            GameObject.Find("Window " + (scR[i,1] + 1) + "0" + (scR[i,0] + 1)).GetComponent<SpriteRenderer>().sprite=windowQ;
+            GameObject.Find("Window " + (scR[i,1] + 1) + "0" + (scR[i,0] + 1)).GetComponent<SpriteRenderer>().sprite=windowQ1;
 
         }
     }
     // Use this for initialization
     void Start()
     {
+        windowQ1 = windowQ;
+        windowN1 = windowN;
     
         curTime = 0;
         curMoney = 0;
@@ -73,15 +86,32 @@ public class GlobalLogic02 : MonoBehaviour
         min = (int)curTime;
         if (min >= 60)
         {
-            curTime = 0;
+            min=0;
+            curTime = min;
             hour++;
         }
-        m = scR[0,0];
-        h = scR[0,1];
+        m = min;
+        h = hour;
         mo = curMoney;
         if(h>=20)
             nextDay();
     }
+//    static public void timeEx()
+//    {
+//        curTime += Time.deltaTime * 3;
+//        min = (int)curTime;
+//        if (min >= 60)
+//        {
+//            curTime = 0;
+//            hour++;
+//        }
+//        m = min;
+//        h = hour;
+//
+//        if(hour>=20)
+//            nextDay();
+//    }
+
     static GlobalLogic02 _instance;
     
     public void Awake()
@@ -109,15 +139,17 @@ public class GlobalLogic02 : MonoBehaviour
         }
     }
 
-    void nextDay()
+    static public void nextDay()
     {
         day++;
         curTime = 0;
         hour = 8;
         curMoney -= 3;
         if (curMoney < 0)
-            GameOver();
+            GameOver(0);
         randomScene1Window();
+        if (day >= dayMax)
+            GameOver(1);
     }
 
 

@@ -1,10 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayerControl05.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GlobalLogic02.cs">
     <Files>
-      <File FileName="Assets\roomObjective.cs" Line="6" Column="53" />
-      <File FileName="Assets\GlobalLogic02.cs" Line="39" Column="51" />
-      <File FileName="Assets\PlayerControl05.cs" Line="15" Column="83" />
+      <File FileName="Assets\PlayerControl05.cs" Line="16" Column="28" />
+      <File FileName="Assets\roomObjective.cs" Line="14" Column="18" />
+      <File FileName="Assets\returnOutside.cs" Line="13" Column="9" />
+      <File FileName="Assets\GlobalLogic02.cs" Line="151" Column="26" />
+      <File FileName="Assets\RoomClick02.cs" Line="22" Column="1" />
+      <File FileName="Assets\windowClean.cs" Line="24" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

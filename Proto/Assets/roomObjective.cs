@@ -6,11 +6,13 @@ public class roomObjective : MonoBehaviour {
     static public Transform[] target=new Transform[findObject];
 	// Use this for initialization
 	void Start () {
+        GlobalLogic02.hour += 1;
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
 	
 	}
 }
