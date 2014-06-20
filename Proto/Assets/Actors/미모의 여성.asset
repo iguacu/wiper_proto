@@ -9,16 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 826a91b253e644518aaebff7f6ac87c7, type: 3}
-  m_Name: "\uCC3D\uBB38\uB2E6\uC774"
+  m_Name: "\uBBF8\uBAA8\uC758 \uC5EC\uC131"
   m_EditorClassIdentifier: 
-  actorName: "\uCC3D\uBB38\uB2E6\uC774"
+  actorName: "\uBBF8\uBAA8\uC758 \uC5EC\uC131"
   textColor: {r: 1, g: 1, b: 1, a: 1}
   baseActorState:
     stateName: Normal
-    sizeInPercent: 100
+    sizeInPercent: 56.2999992
     dataArray:
-    - name: "\uCC3D\uBB38\uB2E6\uC774_0"
-      parentname: "\uCC3D\uBB38\uB2E6\uC774"
+    - name: "\uBBF8\uBAA8\uC758 \uC5EC\uC131_0"
+      parentname: "\uBBF8\uBAA8\uC758 \uC5EC\uC131"
       nodeType: 3
       posX: 0
       posY: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
       sclY: 1
       sclZ: 1
       uiAtlasName: 
-      texturePath: Dial_nick
+      texturePath: woman1
       alpha: 1
       show: 1
       makePixelPerfect: 1

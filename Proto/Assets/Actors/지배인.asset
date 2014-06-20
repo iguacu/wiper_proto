@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 826a91b253e644518aaebff7f6ac87c7, type: 3}
-  m_Name: "\u110C\u1175\u1107\u1162\u110B\u1175\u11AB"
+  m_Name: "\uC9C0\uBC30\uC778"
   m_EditorClassIdentifier: 
   actorName: "\uC9C0\uBC30\uC778"
   textColor: {r: 1, g: 1, b: 1, a: 1}

@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneEntries:
-  - {fileID: 11400000, guid: 64b331f43a4ab48aa8ead5a264af5e88, type: 2}
+  - {fileID: 11400000, guid: 9d5a55cbc281645bfb6d2ff043df3beb, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
