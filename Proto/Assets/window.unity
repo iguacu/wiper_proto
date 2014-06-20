@@ -158,6 +158,7 @@ GameObject:
   - 4: {fileID: 35964313}
   - 212: {fileID: 35964312}
   - 114: {fileID: 35964314}
+  - 61: {fileID: 35964315}
   m_Layer: 0
   m_Name: dust
   m_TagString: Untagged
@@ -207,13 +208,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 35964311}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22495e3fa31a4bc4ebbe04f878ae20d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4802779b3217b704a93a8b2dc2406abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   x: 0
   y: 0
   goRoom: {fileID: 4678066}
   exit: {fileID: 2141729606}
+--- !u!61 &35964315
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 35964311}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 17.6299992, y: 10.0200005}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &425856794
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,8 +386,8 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.51693249
-  m_Depth: -1
+  orthographic size: 5.1630435
+  m_Depth: -10
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295

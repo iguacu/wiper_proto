@@ -176,6 +176,9 @@
      <Compile Include="Assets\roomObjective.cs" />
      <Compile Include="Assets\toRoom.cs" />
      <Compile Include="Assets\windowClean.cs" />
+     <Compile Include="Assets\windowClean03.cs" />
+     <Compile Include="Assets\windowClean04.cs" />
+     <Compile Include="Assets\windowClean_02.cs" />
      <None Include="Assets\VisualNovelToolkit\Resources\Shader\Unlit Alpha.shader" />
      <None Include="Assets\VisualNovelToolkit\ReadMe_Japanese.txt" />
      <None Include="Assets\VisualNovelToolkit\Resources\BGM\ReadMe.txt" />
