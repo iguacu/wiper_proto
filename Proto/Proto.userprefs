@@ -2,12 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GlobalLogic02.cs">
     <Files>
-      <File FileName="Assets\PlayerControl05.cs" Line="16" Column="28" />
-      <File FileName="Assets\roomObjective.cs" Line="14" Column="18" />
-      <File FileName="Assets\returnOutside.cs" Line="13" Column="9" />
-      <File FileName="Assets\GlobalLogic02.cs" Line="151" Column="26" />
-      <File FileName="Assets\RoomClick02.cs" Line="22" Column="1" />
-      <File FileName="Assets\windowClean.cs" Line="24" Column="14" />
+      <File FileName="Assets\returnOutside.cs" Line="9" Column="8" />
+      <File FileName="Assets\toRoom.cs" Line="15" Column="6" />
+      <File FileName="Assets\GlobalLogic02.cs" Line="8" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

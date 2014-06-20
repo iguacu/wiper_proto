@@ -14,7 +14,7 @@ public class GlobalLogic02 : MonoBehaviour
     static public int curX;
     static public int curY;
     static public Transform[,] window = new Transform[wX, wY];
-    int dayMax=15;
+    static int dayMax=15;
     //TestNum
     public float m;
     public float h;
