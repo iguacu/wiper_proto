@@ -15,9 +15,12 @@ public class GlobalLogic02 : MonoBehaviour
     static public int curY;
     static public Transform[,] window = new Transform[wX, wY];
     static int dayMax=15;
+    int timespeed=100;
+    static Sprite[] dayImg = new Sprite[10];
     //TestNum
     public float m;
     public float h;
+    public int d;
     public int mo = 0;
     //Scenario
     static public int totSce=1;
@@ -32,6 +35,18 @@ public class GlobalLogic02 : MonoBehaviour
     static public Sprite windowN1;
     //Scenariio 1
     static public bool s1On = false;
+
+    static void decimalDay()
+    {
+        int day01=9;
+        int day02 = 1;
+            day01=day/10+8;
+        day02 = day % 10;
+        GameObject.Find("Score_Day_Num_01").GetComponent<SpriteRenderer>().sprite = dayImg [day01];
+        GameObject.Find("Score_Day_Num_02").GetComponent<SpriteRenderer>().sprite = dayImg [day02];
+
+    }
+
     static void GameOver(int gameCoef)
     {
         if (gameCoef == 0)
@@ -61,9 +76,9 @@ public class GlobalLogic02 : MonoBehaviour
     
         curTime = 0;
         curMoney = 0;
-        for (var i=0; i<2; i++)
+        for (int i=0; i<wX; i++)
         {
-            for (var j=0; j<2; j++)
+            for (int j=0; j<wY; j++)
             {
                 window [i, j] = GameObject.Find("Window " + (j + 1) + "0" + (i + 1)).transform;
             }
@@ -73,6 +88,12 @@ public class GlobalLogic02 : MonoBehaviour
             currentSceneStage[i]=0;
         }
         randomScene1Window();
+        for (int i=0; i<10; i++)
+        {
+            dayImg[i]=Resources.Load<Sprite>("Resouces/Objects/Days/0.png");
+
+
+        }
     }
         // Update is called once per frame
     void Update()
@@ -82,7 +103,7 @@ public class GlobalLogic02 : MonoBehaviour
     }
     void time()
     {
-        curTime += Time.deltaTime * 3;
+        curTime += Time.deltaTime * timespeed;
         min = (int)curTime;
         if (min >= 60)
         {
@@ -92,6 +113,7 @@ public class GlobalLogic02 : MonoBehaviour
         }
         m = min;
         h = hour;
+        d = day;
         mo = curMoney;
         if(h>=20)
             nextDay();
@@ -142,6 +164,7 @@ public class GlobalLogic02 : MonoBehaviour
     static public void nextDay()
     {
         day++;
+        decimalDay();
         curTime = 0;
         hour = 8;
         curMoney -= 3;
