@@ -52,14 +52,17 @@ public class GlobalLogic02 : MonoBehaviour
     {
         int day01 = day / 10;
         int day02 = day % 10;
-        GameObject.Find("Score_Day_Num01").GetComponent<SpriteRenderer>().sprite = dayImg [day01];
-        GameObject.Find("Score_Day_Num02").GetComponent<SpriteRenderer>().sprite = dayImg [day02];
+        if (Application.loadedLevelName == "hotel01")
+        {
+            GameObject.Find("Score_Day_Num01").GetComponent<SpriteRenderer>().sprite = dayImg [day01];
+            GameObject.Find("Score_Day_Num02").GetComponent<SpriteRenderer>().sprite = dayImg [day02];
+        }
     }
     static void decimalMoney()
     {
         int mon01 = curMoney/ 10;
         int mon02 = curMoney % 10;
-		if (curMoney >= 0) {
+        if (curMoney >= 0&&Application.loadedLevelName == "hotel01") {
 			GameObject.Find ("Score_Money_Num01").GetComponent<SpriteRenderer> ().sprite = dayImg [mon01];
 			GameObject.Find ("Score_Money_Num02").GetComponent<SpriteRenderer> ().sprite = dayImg [mon02];
 		}
@@ -68,15 +71,21 @@ public class GlobalLogic02 : MonoBehaviour
 	{
 		int hour01 = hour / 10;
 		int hour02 = hour % 10;
-		GameObject.Find("Score_Time_Num01").GetComponent<SpriteRenderer>().sprite = dayImg [hour01];
-		GameObject.Find("Score_Time_Num02").GetComponent<SpriteRenderer>().sprite = dayImg [hour02];
+        if (Application.loadedLevelName == "hotel01")
+        {
+            GameObject.Find("Score_Time_Num01").GetComponent<SpriteRenderer>().sprite = dayImg [hour01];
+            GameObject.Find("Score_Time_Num02").GetComponent<SpriteRenderer>().sprite = dayImg [hour02];
+        }
 	}
 	static void decimalMinute()
 	{
 		int min01 = min / 10;
 		int min02 = min % 10;
-		GameObject.Find("Score_Time_Num03").GetComponent<SpriteRenderer>().sprite = dayImg [min01];
-		GameObject.Find("Score_Time_Num04").GetComponent<SpriteRenderer>().sprite = dayImg [min02];
+        if (Application.loadedLevelName == "hotel01")
+        {
+            GameObject.Find("Score_Time_Num03").GetComponent<SpriteRenderer>().sprite = dayImg [min01];
+            GameObject.Find("Score_Time_Num04").GetComponent<SpriteRenderer>().sprite = dayImg [min02];
+        }
 	}
     static void GameOver(int gameCoef)
     {
@@ -90,11 +99,21 @@ public class GlobalLogic02 : MonoBehaviour
     }    
     static void randomScene1Window()
     {
-        for (int i=0; i<totSce; i++)
+        if (Application.loadedLevelName == "hotel01")
         {
-            scR [i, 0] = (int)(Random.value * wX);
-            scR [i, 1] = (int)(Random.value * wY);
-            GameObject.Find("Window " + (scR [i, 1] + 1) + "0" + (scR [i, 0] + 1)).GetComponent<SpriteRenderer>().sprite = windowQ1;
+            for (int i=0; i<wX; i++)
+            {
+                for (int j=0; j<wY; j++)
+                {
+                    GameObject.Find("Window " + (j + 1) + "0" + (i + 1)).GetComponent<SpriteRenderer>().sprite = windowN1;
+                }
+            }
+            for (int i=0; i<totSce; i++)
+            {
+                scR [i, 0] = (int)(Random.value * wX);
+                scR [i, 1] = (int)(Random.value * wY);
+                GameObject.Find("Window " + (scR [i, 1] + 1) + "0" + (scR [i, 0] + 1)).GetComponent<SpriteRenderer>().sprite = windowQ1;
+            }
         }
     }
     // Use this for initialization
@@ -176,7 +195,7 @@ public class GlobalLogic02 : MonoBehaviour
     static public void nextDay()
     {
         day++;
-        decimalDay();
+       decimalDay();
         curTime = 0;
         hour = 8;
 		min = 0;
