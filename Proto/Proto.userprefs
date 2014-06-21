@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\windowClean04.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GlobalLogic02.cs">
     <Files>
-      <File FileName="Assets\windowClean03.cs" Line="92" Column="6" />
-      <File FileName="Assets\windowClean04.cs" Line="81" Column="23" />
+      <File FileName="Assets\roomObjective.cs" Line="13" Column="36" />
+      <File FileName="Assets\GlobalLogic02.cs" Line="44" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -32,12 +32,23 @@ public class GlobalLogic02 : MonoBehaviour
     public Sprite windowN;
     static public Sprite windowQ1;// Resources.Load("fruits_1", typeof(Sprite)) as Sprite
     static public Sprite windowN1;
+    string [][][] scenario;
     //Scenariio 1
     static public bool s1On = false;
+    string[][] clues;
+
     //dontDestroy
     static GlobalLogic02 _instance;
-
-    static void decimalDay()
+//    void setScenario()
+//    {
+//        scenario=new string[totSce][][];
+//
+//    }
+//    void setInScenario(int i)
+//    {
+//        scenario[i]=new 
+//    }
+     static void decimalDay()
     {
         int day01 = day / 10;
         int day02 = day % 10;
@@ -48,9 +59,25 @@ public class GlobalLogic02 : MonoBehaviour
     {
         int mon01 = curMoney/ 10;
         int mon02 = curMoney % 10;
-        GameObject.Find("Score_Money_Num01").GetComponent<SpriteRenderer>().sprite = dayImg [mon01];
-        GameObject.Find("Score_Money_Num02").GetComponent<SpriteRenderer>().sprite = dayImg [mon02];
+		if (curMoney >= 0) {
+			GameObject.Find ("Score_Money_Num01").GetComponent<SpriteRenderer> ().sprite = dayImg [mon01];
+			GameObject.Find ("Score_Money_Num02").GetComponent<SpriteRenderer> ().sprite = dayImg [mon02];
+		}
     }
+	static void decimalHour()
+	{
+		int hour01 = hour / 10;
+		int hour02 = hour % 10;
+		GameObject.Find("Score_Time_Num01").GetComponent<SpriteRenderer>().sprite = dayImg [hour01];
+		GameObject.Find("Score_Time_Num02").GetComponent<SpriteRenderer>().sprite = dayImg [hour02];
+	}
+	static void decimalMinute()
+	{
+		int min01 = min / 10;
+		int min02 = min % 10;
+		GameObject.Find("Score_Time_Num03").GetComponent<SpriteRenderer>().sprite = dayImg [min01];
+		GameObject.Find("Score_Time_Num04").GetComponent<SpriteRenderer>().sprite = dayImg [min02];
+	}
     static void GameOver(int gameCoef)
     {
         if (gameCoef == 0)
@@ -78,7 +105,9 @@ public class GlobalLogic02 : MonoBehaviour
         curTime = 0;
         curMoney = 0;
         Sprite[] textures = Resources.LoadAll<Sprite>("Objects/Days");
-
+        totSceneStage [0] = 5;
+        for(int i=0;i<totSce;i++)
+        currentSceneStage [i] = 0;
         for (int i=0; i<wX; i++)
         {
             for (int j=0; j<wY; j++)
@@ -106,18 +135,20 @@ public class GlobalLogic02 : MonoBehaviour
     {
         curTime += Time.deltaTime * timespeed;
         min = (int)curTime;
+		decimalMinute ();
         decimalMoney();
         if (min >= 60)
         {
             min = 0;
             curTime = min;
             hour++;
+			decimalHour();
         }
         m = min;
         h = hour;
         d = day;
         mo = curMoney;
-        if (h >= 20)
+        if (h >= 18)
             nextDay();
     }
     public void Awake()
@@ -148,6 +179,7 @@ public class GlobalLogic02 : MonoBehaviour
         decimalDay();
         curTime = 0;
         hour = 8;
+		min = 0;
         curMoney -= 3;
         if (curMoney < 0)
             GameOver(0);

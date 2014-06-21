@@ -170,7 +170,10 @@
      <Compile Include="Assets\VisualNovelToolkit\iTween\Sample\MoveSample.cs" />
      <Compile Include="Assets\VisualNovelToolkit\iTween\Sample\RotateSample.cs" />
      <Compile Include="Assets\VisualNovelToolkit\iTween\Sample\SampleInfo.cs" />
+     <Compile Include="Assets\bagOn.cs" />
+     <Compile Include="Assets\changeBackground.cs" />
      <Compile Include="Assets\clickRoom.cs" />
+     <Compile Include="Assets\noteOn.cs" />
      <Compile Include="Assets\playerControl03.cs" />
      <Compile Include="Assets\returnOutside.cs" />
      <Compile Include="Assets\roomObjective.cs" />
