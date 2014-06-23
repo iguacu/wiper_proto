@@ -3,7 +3,7 @@ using System.Collections;
 
 public class windowClean04 : MonoBehaviour
 {
-    int r = 10;
+    int r = 100;
     bool tf = false;
     string Level = "Room 01";
     public float x, y;
@@ -38,8 +38,7 @@ public class windowClean04 : MonoBehaviour
     {
         int f = findRoom();
         GlobalLogic02.curScene = f;
-        GameObject.Find("Window " + (GlobalLogic02.curX + 1) + "0" + (GlobalLogic02.curY + 1)).GetComponent<SpriteRenderer>().sprite = GlobalLogic02.windowN1;
-        if (f != -1)
+         if (f != -1)
             goRoom.position = new Vector3(goRoom.position.x, goRoom.position.y, -5);
         exit.position = new Vector3(exit.position.x, exit.position.y, -5);
         GlobalLogic02.curMoney++;

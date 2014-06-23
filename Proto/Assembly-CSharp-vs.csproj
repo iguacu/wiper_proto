@@ -171,6 +171,7 @@
      <Compile Include="Assets\VisualNovelToolkit\iTween\Sample\RotateSample.cs" />
      <Compile Include="Assets\VisualNovelToolkit\iTween\Sample\SampleInfo.cs" />
      <Compile Include="Assets\bagOn.cs" />
+     <Compile Include="Assets\bagOn_window.cs" />
      <Compile Include="Assets\changeBackground.cs" />
      <Compile Include="Assets\clickRoom.cs" />
      <Compile Include="Assets\noteOn.cs" />

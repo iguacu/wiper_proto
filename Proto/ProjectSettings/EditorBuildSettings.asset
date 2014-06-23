@@ -12,6 +12,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/hotel01.unity
   - enabled: 1
-    path: Assets/Room 0100.unity
+    path: Assets/Room0000.unity
   - enabled: 1
     path: Assets/window.unity

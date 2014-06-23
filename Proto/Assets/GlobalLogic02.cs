@@ -32,23 +32,39 @@ public class GlobalLogic02 : MonoBehaviour
     public Sprite windowN;
     static public Sprite windowQ1;// Resources.Load("fruits_1", typeof(Sprite)) as Sprite
     static public Sprite windowN1;
-    string [][][] scenario;
+    static string[][][] scenarioItems;
+    static int[][] numOfItems;
     //Scenariio 1
     static public bool s1On = false;
     string[][] clues;
 
     //dontDestroy
     static GlobalLogic02 _instance;
-//    void setScenario()
-//    {
-//        scenario=new string[totSce][][];
-//
-//    }
-//    void setInScenario(int i)
-//    {
-//        scenario[i]=new 
-//    }
-     static void decimalDay()
+
+    void setScenario()
+    {
+        scenarioItems = new string[totSce][][];
+        numOfItems = new int[totSce][];
+        //Scenario1
+        numOfItems [0] = new int[totSceneStage [0]];//5
+        scenarioItems [0] = new string[totSceneStage [0]][];
+        numOfItems [0] [0] = 1;
+        numOfItems [0] [1] = 3;
+        numOfItems [0] [2] = 2;
+        numOfItems [0] [3] = 1;
+        for (int i=0; i<totSceneStage[0]; i++)
+            scenarioItems [0] [i] = new string[numOfItems [0] [i]];
+        scenarioItems [0] [0] [0] = "letter";
+        scenarioItems [0] [1] [0] = "A";
+        scenarioItems [0] [1] [1] = "M";
+        scenarioItems [0] [1] [2] = "Y";
+        scenarioItems [0] [2] [0] = "name";
+        scenarioItems [0] [2] [1] = "ID";
+        scenarioItems [0] [1] [0] = "cloth";
+        //Scenario2
+    }
+
+    static void decimalDay()
     {
         int day01 = day / 10;
         int day02 = day % 10;
@@ -58,35 +74,40 @@ public class GlobalLogic02 : MonoBehaviour
             GameObject.Find("Score_Day_Num02").GetComponent<SpriteRenderer>().sprite = dayImg [day02];
         }
     }
+
     static void decimalMoney()
     {
-        int mon01 = curMoney/ 10;
+        int mon01 = curMoney / 10;
         int mon02 = curMoney % 10;
-        if (curMoney >= 0&&Application.loadedLevelName == "hotel01") {
-			GameObject.Find ("Score_Money_Num01").GetComponent<SpriteRenderer> ().sprite = dayImg [mon01];
-			GameObject.Find ("Score_Money_Num02").GetComponent<SpriteRenderer> ().sprite = dayImg [mon02];
-		}
+        if (curMoney >= 0 && Application.loadedLevelName == "hotel01")
+        {
+            GameObject.Find("Score_Money_Num01").GetComponent<SpriteRenderer>().sprite = dayImg [mon01];
+            GameObject.Find("Score_Money_Num02").GetComponent<SpriteRenderer>().sprite = dayImg [mon02];
+        }
     }
-	static void decimalHour()
-	{
-		int hour01 = hour / 10;
-		int hour02 = hour % 10;
+
+    static void decimalHour()
+    {
+        int hour01 = hour / 10;
+        int hour02 = hour % 10;
         if (Application.loadedLevelName == "hotel01")
         {
             GameObject.Find("Score_Time_Num01").GetComponent<SpriteRenderer>().sprite = dayImg [hour01];
             GameObject.Find("Score_Time_Num02").GetComponent<SpriteRenderer>().sprite = dayImg [hour02];
         }
-	}
-	static void decimalMinute()
-	{
-		int min01 = min / 10;
-		int min02 = min % 10;
+    }
+
+    static void decimalMinute()
+    {
+        int min01 = min / 10;
+        int min02 = min % 10;
         if (Application.loadedLevelName == "hotel01")
         {
             GameObject.Find("Score_Time_Num03").GetComponent<SpriteRenderer>().sprite = dayImg [min01];
             GameObject.Find("Score_Time_Num04").GetComponent<SpriteRenderer>().sprite = dayImg [min02];
         }
-	}
+    }
+
     static void GameOver(int gameCoef)
     {
         if (gameCoef == 0)
@@ -96,7 +117,8 @@ public class GlobalLogic02 : MonoBehaviour
         {
             //Ending      
         }
-    }    
+    }
+
     static void randomScene1Window()
     {
         if (Application.loadedLevelName == "hotel01")
@@ -125,8 +147,8 @@ public class GlobalLogic02 : MonoBehaviour
         curMoney = 0;
         Sprite[] textures = Resources.LoadAll<Sprite>("Objects/Days");
         totSceneStage [0] = 5;
-        for(int i=0;i<totSce;i++)
-        currentSceneStage [i] = 0;
+        for (int i=0; i<totSce; i++)
+            currentSceneStage [i] = 0;
         for (int i=0; i<wX; i++)
         {
             for (int j=0; j<wY; j++)
@@ -141,7 +163,7 @@ public class GlobalLogic02 : MonoBehaviour
         randomScene1Window(); 
         for (int i=0; i<10; i++)
         {
-            dayImg [i] =textures [i];
+            dayImg [i] = textures [i];
         }
     }
     // Update is called once per frame
@@ -154,14 +176,14 @@ public class GlobalLogic02 : MonoBehaviour
     {
         curTime += Time.deltaTime * timespeed;
         min = (int)curTime;
-		decimalMinute ();
+        decimalMinute();
         decimalMoney();
         if (min >= 60)
         {
             min = 0;
             curTime = min;
             hour++;
-			decimalHour();
+            decimalHour();
         }
         m = min;
         h = hour;
@@ -170,11 +192,13 @@ public class GlobalLogic02 : MonoBehaviour
         if (h >= 18)
             nextDay();
     }
+
     public void Awake()
     {
         // 씬이 변경되어도 제거되지 않도록 설정
         DontDestroyOnLoad(gameObject);
-    }    
+    }
+
     public static GlobalLogic02 Instance
     {
         get
@@ -192,13 +216,14 @@ public class GlobalLogic02 : MonoBehaviour
             return _instance;
         }
     }
+
     static public void nextDay()
     {
         day++;
-       decimalDay();
+        decimalDay();
         curTime = 0;
         hour = 8;
-		min = 0;
+        min = 0;
         curMoney -= 3;
         if (curMoney < 0)
             GameOver(0);
