@@ -15,7 +15,7 @@ public class GlobalLogic02 : MonoBehaviour
     static public int curY;
     static public Transform[,] window = new Transform[wX, wY];
     static int dayMax = 15;
-    int timespeed = 100;
+    int timespeed = 10;
     static Sprite[] dayImg = new Sprite[10];
     static public string note="";
     //TestNum
