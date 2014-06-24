@@ -17,7 +17,7 @@ public class RoomClick02 : MonoBehaviour {
         
         if (tf && Input.GetKey(KeyCode.Space)&&GlobalLogic02.windowT[GlobalLogic02.curX,GlobalLogic02.curY])
         {
-            GameObject.Find("Window " + (GlobalLogic02.curX + 1) + "0" + (GlobalLogic02.curY + 1)).GetComponent<SpriteRenderer>().sprite = GlobalLogic02.windowN1;
+            GameObject.Find("Window " + (GlobalLogic02.curY + 1) + "0" + (GlobalLogic02.curX + 1)).GetComponent<SpriteRenderer>().sprite = GlobalLogic02.windowN1;
             Application.LoadLevel(Level);
         }
 	}
