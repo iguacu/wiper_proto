@@ -5,8 +5,8 @@ public class PlayerControl05 : MonoBehaviour
 {
 
     // Use this for initialization
-    int pX = 0;
-    int pY = 0;
+    public int pX = 0;
+    public int pY = 0;
     int xmax = GlobalLogic02.wX;
     int ymax = GlobalLogic02.wY;
 
@@ -21,28 +21,28 @@ public class PlayerControl05 : MonoBehaviour
     {
         if ((pY < ymax - 1))
         { 
-            if (Event.current.Equals(Event.KeyboardEvent("w")))
+            if (Event.current.Equals(Event.KeyboardEvent("w"))&&GlobalLogic02.passT[pX,pY+1])
             {                
                 pY++;
             }             
         }
         if (pY > 0)
         {
-            if (Event.current.Equals(Event.KeyboardEvent("s")))
+            if (Event.current.Equals(Event.KeyboardEvent("s"))&&GlobalLogic02.passT[pX,pY-1])
             {                
                 pY--;
             }            
         }
         if ((pX > 0))
         {      
-            if (Event.current.Equals(Event.KeyboardEvent("a")))
+            if (Event.current.Equals(Event.KeyboardEvent("a"))&&GlobalLogic02.passT[pX-1,pY])
             {                
                 pX--;
             }            
         }
         if ((pX < xmax - 1))
         {
-            if (Event.current.Equals(Event.KeyboardEvent("d")))
+            if (Event.current.Equals(Event.KeyboardEvent("d"))&&GlobalLogic02.passT[pX+1,pY])
             {                
                 pX++;
             }

@@ -9,14 +9,16 @@ public class GlobalLogic02 : MonoBehaviour
     static public int day = 1;
     static public int hour = 8;
     static public int min = 0;
-    static public int wX = 2;
-    static public int wY = 2;
+    static public int wX = 6;
+    static public int wY = 9;
     static public int curX;
     static public int curY;
     static public Transform[,] window = new Transform[wX, wY];
     static int dayMax = 15;
     int timespeed = 10;
     static Sprite[] dayImg = new Sprite[10];
+    static public bool[,] windowT = new bool[wX, wY];
+    static public bool[,] passT= new bool[wX, wY];
     static public string note="";
     //TestNum
     public float m;
@@ -119,8 +121,7 @@ public class GlobalLogic02 : MonoBehaviour
             //Ending      
         }
     }
-
-    static void randomScene1Window()
+    void loadWindow()
     {
         if (Application.loadedLevelName == "hotel01")
         {
@@ -128,16 +129,25 @@ public class GlobalLogic02 : MonoBehaviour
             {
                 for (int j=0; j<wY; j++)
                 {
-                    GameObject.Find("Window " + (j + 1) + "0" + (i + 1)).GetComponent<SpriteRenderer>().sprite = windowN1;
+                    if(windowT[i,j])
+                        GameObject.Find("Window " + (j + 1) + "0" + (i + 1)).GetComponent<SpriteRenderer>().sprite = windowN1;
                 }
             }
             for (int i=0; i<totSce; i++)
             {
-                scR [i, 0] = (int)(Random.value * wX);
-                scR [i, 1] = (int)(Random.value * wY);
+                if(windowT[scR [i, 0],scR [i, 1]])                 
                 GameObject.Find("Window " + (scR [i, 1] + 1) + "0" + (scR [i, 0] + 1)).GetComponent<SpriteRenderer>().sprite = windowQ1;
             }
         }
+    }
+    static void randomScene1Window()
+    {
+            for (int i=0; i<totSce; i++)
+        {
+            scR [i, 0] = (int)(Random.value * wX);
+            scR [i, 1] = (int)(Random.value * wY);
+        }
+
     }
     // Use this for initialization
     void Start()
@@ -146,6 +156,31 @@ public class GlobalLogic02 : MonoBehaviour
         windowN1 = windowN;    
         curTime = 0;
         curMoney = 0;
+        for (int i=0; i<wX; i++)
+        {
+            for(int j=0;j<wY;j++)
+                windowT[i,j]=true;
+        }
+        windowT [0, 8] = false;
+        windowT [1, 8] = false;
+        windowT [4, 8] = false;
+        windowT [5, 8] = false;        
+        windowT [2, 0] = false;
+        windowT [2, 1] = false;
+        windowT [2, 2] = false;
+        windowT [3, 0] = false;
+        windowT [3, 1] = false;
+        windowT [3, 2] = false;
+        for (int i=0; i<wX; i++)
+        {
+            for(int j=0;j<wY;j++)
+                passT[i,j]=true;
+        }
+        passT [0, 8] = false;
+        passT [1, 8] = false;
+        passT [4, 8] = false;
+        passT [5, 8] = false;        
+
         Sprite[] textures = Resources.LoadAll<Sprite>("Objects/Days");
         totSceneStage [0] = 5;
         for (int i=0; i<totSce; i++)
@@ -154,6 +189,7 @@ public class GlobalLogic02 : MonoBehaviour
         {
             for (int j=0; j<wY; j++)
             {
+                if(passT[i,j])
                 window [i, j] = GameObject.Find("Window " + (j + 1) + "0" + (i + 1)).transform;
             }
         }
@@ -166,6 +202,7 @@ public class GlobalLogic02 : MonoBehaviour
         {
             dayImg [i] = textures [i];
         }
+       
     }
     // Update is called once per frame
     void Update()
@@ -175,6 +212,8 @@ public class GlobalLogic02 : MonoBehaviour
 
     void time()
     {
+        if (Application.loadedLevelName == "hotel01")
+            loadWindow();
         curTime += Time.deltaTime * timespeed;
         min = (int)curTime;
         decimalMinute();
