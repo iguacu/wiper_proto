@@ -17,6 +17,7 @@ public class GlobalLogic02 : MonoBehaviour
     static int dayMax = 15;
     int timespeed = 100;
     static Sprite[] dayImg = new Sprite[10];
+    static public string note="";
     //TestNum
     public float m;
     public float h;

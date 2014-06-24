@@ -174,7 +174,8 @@
      <Compile Include="Assets\bagOn_window.cs" />
      <Compile Include="Assets\changeBackground.cs" />
      <Compile Include="Assets\clickRoom.cs" />
-     <Compile Include="Assets\noteOn.cs" />
+     <Compile Include="Assets\itemClick.cs" />
+     <Compile Include="Assets\note.cs" />
      <Compile Include="Assets\playerControl03.cs" />
      <Compile Include="Assets\returnOutside.cs" />
      <Compile Include="Assets\roomObjective.cs" />

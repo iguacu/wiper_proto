@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class noteOn : MonoBehaviour {
-
+public class itemClick : MonoBehaviour {
+    string itemName;
 	// Use this for initialization
 	void Start () {
+        itemName = gameObject.name;
 	
 	}
 	
@@ -12,8 +13,8 @@ public class noteOn : MonoBehaviour {
 	void Update () {
 	
 	}
-    void onMouseDown()
+    void OnMouseDown()
     {
-        //boxcomponent transform.z -5로
+
     }
 }

@@ -5,7 +5,6 @@ public class windowClean02 : MonoBehaviour
 {
     int r = 100;
     bool tf = false;
-    string Level = "Room 01";
     public float x, y;
     public Transform goRoom;
     public Transform exit;

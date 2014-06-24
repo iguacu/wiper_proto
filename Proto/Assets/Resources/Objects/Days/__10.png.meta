@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c0976c8cf59d6944b89caf34a57e42de
+guid: 516cc4760cfa97542bfe3f4860148fa8
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -41,5 +41,5 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites: []
-  spritePackingTag: 
+  spritePackingTag: 0
   userData: 

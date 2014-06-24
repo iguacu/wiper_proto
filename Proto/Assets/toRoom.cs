@@ -4,9 +4,9 @@ using System.Collections;
 public class toRoom : MonoBehaviour
 {
 
-    public int scenarioNum=10;
-    public int curScene=10;
-    public string level;
+    public int scenarionum=5;
+    public int curscene=5;
+    public string Level="hotel01";
     // Use this for initialization
     void Start()
     {
@@ -16,25 +16,28 @@ public class toRoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    
+
     }
 
-    void onMouseDown()
+    void OnMouseDown()
     {
-        curScenarioStage();
-        level = "Room" + (scenarioNum / 10) + (scenarioNum % 10) + (curScene / 10) + (curScene % 10);
-        Application.LoadLevel(level);
+        curscene = GlobalLogic02.curX;
+        scenarionum = GlobalLogic02.scR [0, 0];
+        curScenarioStage();      
+       
     }
 
     void curScenarioStage()
     {
-        for (int i=0; i<GlobalLogic02.totSce; i++)
+		for (int i=0; i<GlobalLogic02.totSce; i++)
         {
             if (GlobalLogic02.scR [i, 0] == GlobalLogic02.curX && GlobalLogic02.scR [i, 1] == GlobalLogic02.curY)
             {
-                scenarioNum = i;
-                curScene = GlobalLogic02.currentSceneStage [i];
-
+                scenarionum = i;
+                curscene = GlobalLogic02.currentSceneStage [i];
+				Level = "Room" + (scenarionum / 10) + (scenarionum % 10) + (curscene / 10) + (curscene % 10);
+				Application.LoadLevel(Level);
+                break;
             }
         }
     }
