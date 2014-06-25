@@ -2,11 +2,10 @@ using UnityEngine;
 using System.Collections;
 
 public class roomObjective : MonoBehaviour {
-    static public int findObject=1;
-    static public Transform[] target=new Transform[findObject];
-	// Use this for initialization
+
+   // Use this for initialization
 	void Start () {
-        GlobalLogic02.hour += 1;
+
 	
 	}
 	

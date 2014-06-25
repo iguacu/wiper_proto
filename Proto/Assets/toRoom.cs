@@ -1,28 +1,30 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class toRoom : MonoBehaviour
 {
 
-    public int scenarionum=5;
-    public int curscene=5;
+    public int scenarionum=0;
+    public int curscene=1;
     public string Level="hotel01";
     // Use this for initialization
     void Start()
     {
+        curscene =  GlobalLogic02.currentSceneStage [0];
+        scenarionum = 0;
     
     }
     
     // Update is called once per frame
     void Update()
     {
-
+        curscene =  GlobalLogic02.currentSceneStage [0];
     }
 
     void OnMouseDown()
     {
-        curscene = GlobalLogic02.curX;
-        scenarionum = GlobalLogic02.scR [0, 0];
+        curscene =  GlobalLogic02.currentSceneStage [0];
+        scenarionum = 0;
         curScenarioStage();      
        
     }
@@ -36,7 +38,9 @@ public class toRoom : MonoBehaviour
                 scenarionum = i;
                 curscene = GlobalLogic02.currentSceneStage [i];
 				Level = "Room" + (scenarionum / 10) + (scenarionum % 10) + (curscene / 10) + (curscene % 10);
+                GlobalLogic02.curMoney++;
 				Application.LoadLevel(Level);
+
                 break;
             }
         }

@@ -6,7 +6,7 @@ public class returnOutside : MonoBehaviour {
     public string Level="hotel01";	
 	void OnMouseDown()
 	{
-       
+        GlobalLogic02.curMoney++;
 		Application.LoadLevel (Level);
 	}
 }

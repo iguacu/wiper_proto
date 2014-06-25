@@ -52,6 +52,7 @@
      <Compile Include="Assets\Item.cs" />
      <Compile Include="Assets\ItemDatabase.cs" />
      <Compile Include="Assets\PlayerControl05.cs" />
+     <Compile Include="Assets\Room0001.cs" />
      <Compile Include="Assets\RoomClick02.cs" />
      <Compile Include="Assets\VisualNovelToolkit\Examples\Example Dialog\Scripts\SampleScenarioEvent.cs" />
      <Compile Include="Assets\VisualNovelToolkit\Scripts\Internal\CodeGenerator.cs" />
@@ -174,11 +175,16 @@
      <Compile Include="Assets\bagOn_window.cs" />
      <Compile Include="Assets\changeBackground.cs" />
      <Compile Include="Assets\clickRoom.cs" />
+     <Compile Include="Assets\ep0100.cs" />
      <Compile Include="Assets\itemClick.cs" />
      <Compile Include="Assets\note.cs" />
+     <Compile Include="Assets\objectDesc.cs" />
      <Compile Include="Assets\playerControl03.cs" />
      <Compile Include="Assets\returnOutside.cs" />
      <Compile Include="Assets\roomObjective.cs" />
+     <Compile Include="Assets\sceneName.cs" />
+     <Compile Include="Assets\skiptohotel.cs" />
+     <Compile Include="Assets\start.cs" />
      <Compile Include="Assets\toRoom.cs" />
      <Compile Include="Assets\windowClean.cs" />
      <Compile Include="Assets\windowClean03.cs" />

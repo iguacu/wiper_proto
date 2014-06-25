@@ -9,7 +9,10 @@ public class PlayerControl05 : MonoBehaviour
     public int pY = 0;
     int xmax = GlobalLogic02.wX;
     int ymax = GlobalLogic02.wY;
-
+    void Start()
+    {
+        GlobalLogic02.loadWindow();
+    }
     void Update()
     {
         transform.position = GlobalLogic02.window [pX, pY].transform.position+new Vector3(0,0,-4);

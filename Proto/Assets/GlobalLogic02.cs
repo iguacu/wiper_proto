@@ -1,19 +1,20 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GlobalLogic02 : MonoBehaviour
 {
     //Static Time/Money/Window;
-    static public float curTime;
-    static public int curMoney;
+    static public float curTime=0;
+    static public int curMoney=0;
     static public int day = 1;
-    static public int hour = 8;
+    static public int hour = 10;
     static public int min = 0;
     static public int wX = 6;
     static public int wY = 9;
     static public int curX;
     static public int curY;
     static public Transform[,] window = new Transform[wX, wY];
+    static public int test=1;
     static int dayMax = 15;
     int timespeed = 10;
     static Sprite[] dayImg = new Sprite[10];
@@ -39,10 +40,11 @@ public class GlobalLogic02 : MonoBehaviour
     static int[][] numOfItems;
     //Scenariio 1
     static public bool s1On = false;
-    string[][] clues;
+    static public string[][] clues;
+    public static string nameofActor="";
 
     //dontDestroy
-    static GlobalLogic02 _instance;
+    private static GlobalLogic02 _instance;
 
     void setScenario()
     {
@@ -121,8 +123,16 @@ public class GlobalLogic02 : MonoBehaviour
             //Ending      
         }
     }
-    void loadWindow()
+    static public void loadWindow()
     {
+        for (int i=0; i<wX; i++)
+        {
+            for (int j=0; j<wY; j++)
+            {
+                if(passT[i,j])
+                    window [i, j] = GameObject.Find("Window " + (j + 1) + "0" + (i + 1)).transform;
+            }
+        }
         if (Application.loadedLevelName == "hotel01")
         {
             for (int i=0; i<wX; i++)
@@ -152,10 +162,9 @@ public class GlobalLogic02 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Debug.Log("Start");
         windowQ1 = windowQ;
         windowN1 = windowN;    
-        curTime = 0;
-        curMoney = 0;
         for (int i=0; i<wX; i++)
         {
             for(int j=0;j<wY;j++)
@@ -180,19 +189,12 @@ public class GlobalLogic02 : MonoBehaviour
         passT [1, 8] = false;
         passT [4, 8] = false;
         passT [5, 8] = false;        
-
+        
         Sprite[] textures = Resources.LoadAll<Sprite>("Objects/Days");
         totSceneStage [0] = 5;
         for (int i=0; i<totSce; i++)
             currentSceneStage [i] = 0;
-        for (int i=0; i<wX; i++)
-        {
-            for (int j=0; j<wY; j++)
-            {
-                if(passT[i,j])
-                window [i, j] = GameObject.Find("Window " + (j + 1) + "0" + (i + 1)).transform;
-            }
-        }
+       
         for (int i=0; i<totSce; i++)
         {
             currentSceneStage [i] = 0;
@@ -202,28 +204,31 @@ public class GlobalLogic02 : MonoBehaviour
         {
             dayImg [i] = textures [i];
         }
-       
+        time();
     }
     // Update is called once per frame
     void Update()
     {
         time();
+
+
     }
 
     void time()
     {
+
         if (Application.loadedLevelName == "hotel01")
             loadWindow();
-        curTime += Time.deltaTime * timespeed;
+        curTime = curTime+Time.deltaTime * timespeed;
+        test++;
         min = (int)curTime;
-        decimalMinute();
-        decimalMoney();
+
         if (min >= 60)
         {
-            min = 0;
+            min = min-60;
             curTime = min;
             hour++;
-            decimalHour();
+
         }
         m = min;
         h = hour;
@@ -231,38 +236,63 @@ public class GlobalLogic02 : MonoBehaviour
         mo = curMoney;
         if (h >= 18)
             nextDay();
+        decimalHour();
+        decimalMinute();
+        decimalMoney();
     }
 
-    public void Awake()
+    void Awake()
     {
-        // 씬이 변경되어도 제거되지 않도록 설정
-        DontDestroyOnLoad(gameObject);
-    }
-
-    public static GlobalLogic02 Instance
-    {
-        get
+        if (_instance)
         {
-            if (_instance == null)
-            {
-                // 현재 씬 내에서 GameManager 컴포넌트를 검색
-                _instance = FindObjectOfType(typeof(GlobalLogic02)) as GlobalLogic02;
-                if (_instance == null)
-                {
-                    // 현재 씬에 GameManager 컴포넌트가 없으면 새로 생성
-                    _instance = new GameObject("Game Manager", typeof(GlobalLogic02)).GetComponent<GlobalLogic02>();
-                }
-            }            
-            return _instance;
+            Destroy (gameObject);
         }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad (gameObject);
+        }
+        Debug.Log("Awake");
+        // 씬이 변경되어도 제거되지 않도록 설정
+
+       
     }
 
+
+       
+      
+
+
+//    public static GlobalLogic02 Instance
+//    {
+//        get
+//        {
+//            if (_instance == null)
+//            {
+//                // 현재 씬 내에서 GameManager 컴포넌트를 검색
+//                GameObject GM = GameObject.Find("GM 오브젝트 이름");
+//                
+//                if(Gm == null)
+//                {
+//                    gm 새로 만들고 gm의 인스턴스를 _instance에 대입
+//                }
+//                
+//                else
+//                {
+//                    _instace 반환
+//                }
+//                
+//                
+//            }            
+//            return _instance;
+//        }
+//    }
     static public void nextDay()
     {
         day++;
         decimalDay();
         curTime = 0;
-        hour = 8;
+        hour = 10;
         min = 0;
         curMoney -= 3;
         if (curMoney < 0)

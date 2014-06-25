@@ -9,6 +9,7 @@ Material:
   m_Name: SaveLoadPanelBackground
   m_Shader: {fileID: 4800000, guid: abaec5d09b9604320b8dd88620ca0919, type: 3}
   m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -16,7 +17,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: f589082ae9cbc4db886691495c640ab5, type: 3}
+          m_Texture: {fileID: 2800000, guid: b9343fa0d403145f0af9f9c58d02ef3e, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats: {}

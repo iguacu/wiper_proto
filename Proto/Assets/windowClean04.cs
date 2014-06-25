@@ -41,7 +41,7 @@ public class windowClean04 : MonoBehaviour
          if (f != -1)
             goRoom.position = new Vector3(goRoom.position.x, goRoom.position.y, -5);
         exit.position = new Vector3(exit.position.x, exit.position.y, -5);
-        GlobalLogic02.curMoney++;
+
     }
 
     int findRoom()

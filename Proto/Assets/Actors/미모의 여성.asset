@@ -15,7 +15,7 @@ MonoBehaviour:
   textColor: {r: 1, g: 1, b: 1, a: 1}
   baseActorState:
     stateName: Normal
-    sizeInPercent: 56.2999992
+    sizeInPercent: 50
     dataArray:
     - name: "\uBBF8\uBAA8\uC758 \uC5EC\uC131_0"
       parentname: "\uBBF8\uBAA8\uC758 \uC5EC\uC131"
