@@ -49,8 +49,10 @@
      <Compile Include="Assets\GlobalLogic02.cs" />
      <Compile Include="Assets\GlobalLogic_Window.cs" />
      <Compile Include="Assets\Inventory.cs" />
+     <Compile Include="Assets\InventoryObject.cs" />
      <Compile Include="Assets\Item.cs" />
      <Compile Include="Assets\ItemDatabase.cs" />
+     <Compile Include="Assets\ItemListButton.cs" />
      <Compile Include="Assets\PlayerControl05.cs" />
      <Compile Include="Assets\Room0001.cs" />
      <Compile Include="Assets\RoomClick02.cs" />
@@ -179,6 +181,8 @@
      <Compile Include="Assets\itemClick.cs" />
      <Compile Include="Assets\note.cs" />
      <Compile Include="Assets\objectDesc.cs" />
+     <Compile Include="Assets\objectDesc2.cs" />
+     <Compile Include="Assets\objectDesc3.cs" />
      <Compile Include="Assets\playerControl03.cs" />
      <Compile Include="Assets\returnOutside.cs" />
      <Compile Include="Assets\roomObjective.cs" />

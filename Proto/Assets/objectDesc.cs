@@ -9,6 +9,7 @@ public class objectDesc : MonoBehaviour
     public bool switchOn = false;
     public Transform D1;
     public Transform D2;
+    public Transform D3;
     // Use this for initialization
     void Start()
     {
@@ -61,13 +62,18 @@ public class objectDesc : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (objec != 14)
-            switchOn = !switchOn;
-        else
+        if (!(objec == 14 || objec == 10))
         {
-            D1.position=new Vector3(D1.position.x,D1.position.y,-7);
-            D2.position=new Vector3(D2.position.x,D2.position.y,-7);
+            switchOn = !switchOn;
+        }
+        else if (objec == 14)
+        {
+            D1.position = new Vector3(D1.position.x, D1.position.y, -7);
+            D2.position = new Vector3(D2.position.x, D2.position.y, -7);
 
+        } else if (objec == 10)
+        {
+            D3.position =new Vector3(D3.position.x,D3.position.y,-7);
         }
        
     }
@@ -80,7 +86,7 @@ public class objectDesc : MonoBehaviour
     {
         if (switchOn )
         {
-            GUI.Box(new Rect(Screen.width / 4, Screen.height / 4, Screen.width / 2, Screen.height / 2), description);
+            GUI.Box(new Rect(Screen.width*3 / 8, Screen.height*3 / 8, Screen.width / 4, Screen.height / 4), description);
 
         }
 

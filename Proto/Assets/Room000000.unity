@@ -146,6 +146,7 @@ GameObject:
   - 4: {fileID: 158809332}
   - 212: {fileID: 158809331}
   - 61: {fileID: 158809333}
+  - 114: {fileID: 158809334}
   m_Layer: 0
   m_Name: Room_stand
   m_TagString: Untagged
@@ -198,6 +199,23 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1.55999994, y: 4.42999983}
   m_Center: {x: 0, y: 0}
+--- !u!114 &158809334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 158809330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce4ac63d0158a4445a409718d3c60e40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  objec: 0
+  switchOn: 0
+  D1: {fileID: 0}
+  D2: {fileID: 0}
+  D3: {fileID: 1574423891}
 --- !u!1 &369473949
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,6 +295,7 @@ MonoBehaviour:
   switchOn: 0
   D1: {fileID: 1423299006}
   D2: {fileID: 2146363409}
+  D3: {fileID: 1574423891}
 --- !u!1 &774695463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,7 +1025,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 10.5, y: 3.9599998}
+  m_Size: {x: 3.66000009, y: 1.98000002}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1574423890
 SpriteRenderer:
@@ -1038,7 +1057,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1574423888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.1601677, y: -1.79873168, z: -1}
+  m_LocalPosition: {x: -.913475037, y: -1.41230702, z: 1}
   m_LocalScale: {x: .300000012, y: .300000012, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1121,6 +1140,7 @@ MonoBehaviour:
   switchOn: 0
   D1: {fileID: 0}
   D2: {fileID: 0}
+  D3: {fileID: 0}
 --- !u!1 &1602731013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,6 +1374,7 @@ MonoBehaviour:
   switchOn: 0
   D1: {fileID: 1423299006}
   D2: {fileID: 2146363409}
+  D3: {fileID: 0}
 --- !u!61 &1829736201
 BoxCollider2D:
   m_ObjectHideFlags: 0

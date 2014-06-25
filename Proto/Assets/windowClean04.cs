@@ -3,13 +3,14 @@ using System.Collections;
 
 public class windowClean04 : MonoBehaviour
 {
-    int r = 100;
+    int r = 20;
     bool tf = false;
     string Level = "Room 01";
     public float x, y;
     public Transform goRoom;
     public Transform exit;
     Sprite img;
+    Sprite randomImg;
     float W ;
     float H ;
     float w ;
@@ -38,7 +39,7 @@ public class windowClean04 : MonoBehaviour
     {
         int f = findRoom();
         GlobalLogic02.curScene = f;
-         if (f != -1)
+        if (f != -1)
             goRoom.position = new Vector3(goRoom.position.x, goRoom.position.y, -5);
         exit.position = new Vector3(exit.position.x, exit.position.y, -5);
 
@@ -70,11 +71,30 @@ public class windowClean04 : MonoBehaviour
         imax = Camera.main.WorldToScreenPoint(gameObject.GetComponent<SpriteRenderer>().bounds.max);
         wS = imax.x - imin.x;
         hS = imax.y - imin.y;
+       
     }    
     // Update is called once per frame
     void Update()
     {
-
+        Vector2 cPoint = new Vector2((Input.mousePosition.x - imin.x) * w / wS, (Input.mousePosition.y - imin.y) * h / hS);
+        x = cPoint.x;
+        y = cPoint.y;
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Debug.Log("Pressed right click.");
+            for (int i=-r; i<r; i++)
+            {
+                for (int j=-r; j<r; j++)
+                {
+                    Color color = img.texture.GetPixel((int)(cPoint.x) + i, (int)(cPoint.y) + j);
+                    img.texture.SetPixel((int)(cPoint.x) + i, (int)(cPoint.y) + j, color+new Color(0.05f,0,0.8f,0.1f));
+                }
+            }
+            
+        } 
+        
+        img.texture.Apply();
+        gameObject.GetComponent<SpriteRenderer>().sprite = img;
     }
 
     void OnMouseDrag()
@@ -82,23 +102,47 @@ public class windowClean04 : MonoBehaviour
         Vector2 cPoint = new Vector2((Input.mousePosition.x - imin.x) * w / wS, (Input.mousePosition.y - imin.y) * h / hS);
         x = cPoint.x;
         y = cPoint.y;
-
-        for (int i=-r; i<r; i++)
+        if (Input.GetMouseButton(0))
         {
-            for (int j=-r; j<r; j++)
+            for (int i=-r; i<r; i++)
             {
-                Color color = img.texture.GetPixel((int)(cPoint.x) + i, (int)(cPoint.y) + j);
-                Color C1 = new Color(color.r, color.g, color.b, 0);
-                img.texture.SetPixel((int)(cPoint.x) + i, (int)(cPoint.y) + j, C1);
+                for (int j=-(int)Mathf.Sqrt(r*r-i*i); j<(int)Mathf.Sqrt(r*r-i*i); j++)
+                {
+                    Color color = img.texture.GetPixel((int)(cPoint.x) + i, (int)(cPoint.y) + j);
+                    Color C1 = new Color(color.r, color.g, color.b, 0);
+                    if(color.b>0.3f)
+                    img.texture.SetPixel((int)(cPoint.x) + i, (int)(cPoint.y) + j, C1);
+                }
+            }             
+
+            if (inOrOut(img))
+            {
+                cleanFinish();
             }
-        }
-            
+        } 
+
+     
         img.texture.Apply();
         gameObject.GetComponent<SpriteRenderer>().sprite = img;
-        if (inOrOut(img))
-        {
-            cleanFinish();
-        }
 
     }
+//    void OnMouseDown()
+//    {
+//        Vector2 cPoint = new Vector2((Input.mousePosition.x - imin.x) * w / wS, (Input.mousePosition.y - imin.y) * h / hS);
+//        x = cPoint.x;
+//        y = cPoint.y;
+//        if (Input.GetMouseButton(1))
+//        {
+//            for (int i=-r; i<r; i++)
+//            {
+//                for (int j=-r; j<r; j++)
+//                {
+//                    img.texture.SetPixel((int)(cPoint.x) + i, (int)(cPoint.y) + j, Color.blue);
+//                }
+//            }
+//            
+//        } 
+//        img.texture.Apply();
+//        gameObject.GetComponent<SpriteRenderer>().sprite = img;
+//    }
 }

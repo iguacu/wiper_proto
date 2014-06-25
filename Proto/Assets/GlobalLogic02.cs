@@ -21,6 +21,7 @@ public class GlobalLogic02 : MonoBehaviour
     static public bool[,] windowT = new bool[wX, wY];
     static public bool[,] passT= new bool[wX, wY];
     static public string note="";
+    static public bool timeOn = true;
     //TestNum
     public float m;
     public float h;
@@ -209,6 +210,7 @@ public class GlobalLogic02 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(timeOn)
         time();
 
 
