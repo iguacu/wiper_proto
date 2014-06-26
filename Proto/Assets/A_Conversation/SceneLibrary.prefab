@@ -41,6 +41,7 @@ MonoBehaviour:
   sceneEntries:
   - {fileID: 11400000, guid: 0454e43724c492847b8aed2e34dffb31, type: 2}
   - {fileID: 11400000, guid: eb0388774fcce394a985d7f6abb175ef, type: 2}
+  - {fileID: 11400000, guid: 006e05d824e05974b97b47dd37bbe9cc, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

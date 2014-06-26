@@ -4,6 +4,7 @@ using System.Collections;
 public class windowClean04 : MonoBehaviour
 {
     int r = 20;
+    int r2 = 50;
     bool tf = false;
     string Level = "Room 01";
     public float x, y;
@@ -79,12 +80,12 @@ public class windowClean04 : MonoBehaviour
         Vector2 cPoint = new Vector2((Input.mousePosition.x - imin.x) * w / wS, (Input.mousePosition.y - imin.y) * h / hS);
         x = cPoint.x;
         y = cPoint.y;
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if(Input.GetMouseButtonUp(1))
         {
             Debug.Log("Pressed right click.");
-            for (int i=-r; i<r; i++)
+            for (int i=-r2; i<r2; i++)
             {
-                for (int j=-r; j<r; j++)
+                for (int j=-(int)Mathf.Sqrt(r2*r2-i*i); j<(int)Mathf.Sqrt(r2*r2-i*i); j++)
                 {
                     Color color = img.texture.GetPixel((int)(cPoint.x) + i, (int)(cPoint.y) + j);
                     img.texture.SetPixel((int)(cPoint.x) + i, (int)(cPoint.y) + j, color+new Color(0.05f,0,0.8f,0.1f));
@@ -92,6 +93,7 @@ public class windowClean04 : MonoBehaviour
             }
             
         } 
+
         
         img.texture.Apply();
         gameObject.GetComponent<SpriteRenderer>().sprite = img;

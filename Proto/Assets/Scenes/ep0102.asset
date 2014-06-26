@@ -42,7 +42,7 @@ MonoBehaviour:
     sclY: 1
     sclZ: 1
     uiAtlasName: 
-    texturePath: BG/ep0102
+    texturePath: BG/first-606
     alpha: 1
     show: 1
     makePixelPerfect: 1
